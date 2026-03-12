@@ -1,0 +1,1 @@
+[submodule "noumena-styleguide"]	path = noumena-styleguide	url = https://github.com/NoumenaDigital/noumena-styleguide	branch = master[submodule "ai-guide"]	path = ai-guide	url = https://github.com/NoumenaDigital/noumena-foundry-ai-guide	branch = master
