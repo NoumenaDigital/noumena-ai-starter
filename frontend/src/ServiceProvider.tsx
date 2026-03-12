@@ -1,20 +1,10 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 import type Keycloak from 'keycloak-js';
-//import { OpenAPI } from './generated/core/OpenAPI';
-//import { DefaultService } from './generated/services/DefaultService';
+import { OpenAPI } from './generated/core/OpenAPI';
+import { DefaultService } from './generated/services/DefaultService';
 import { useAuth } from './AuthProvider';
-var DefaultService = {
-  getItemList: async () => {
-    return [];
-  }
-};
+
 // Set BASE at module level — before any component renders
-var OpenAPI = {
-  BASE: '',
-  TOKEN: async () => {
-    return '';
-  }
-};
 OpenAPI.BASE = import.meta.env.VITE_ENGINE_URL || 'http://localhost:12001';
 
 // _keycloak is updated synchronously in render body (parents render before children)
