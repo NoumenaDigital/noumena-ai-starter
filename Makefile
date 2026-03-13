@@ -34,7 +34,7 @@ ensure-docker-config:
 # Start base infrastructure (all services except keycloak-provisioning and frontend)
 .PHONY: infra
 infra: ensure-docker-config
-	$(DOCKER_COMPOSE) up -d --build engine read-model history nginx-proxy
+	$(DOCKER_COMPOSE) up -d --build engine read-model nginx-proxy
 	@echo "Infra started in detached mode."
 	@echo "Run 'docker compose ps' to inspect service state."
 	@echo "Run 'make infra-health' for quick endpoint checks."
@@ -48,7 +48,7 @@ down: ensure-docker-config
 .PHONY: reset
 reset: ensure-docker-config
 	$(DOCKER_COMPOSE) down -v
-	$(DOCKER_COMPOSE) up --wait --build engine read-model history nginx-proxy
+	$(DOCKER_COMPOSE) up --wait --build engine read-model nginx-proxy
 
 # Check infrastructure health
 .PHONY: infra-health
