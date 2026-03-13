@@ -158,7 +158,7 @@ export function App() {
                 Sign In
               </Button>
               <Typography variant="body2" sx={{ color: 'var(--nm-color-gray-400)' }}>
-                Use your provisioned role account to access the workflow dashboard.
+                Use the following test accounts (<user1>@<app-realm-slug>,<user2>@<app-realm-slug>) password is <KC_INITIAL_USER_PASSWORD>
               </Typography>
             </Stack>
           </CardContent>
